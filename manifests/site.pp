@@ -37,3 +37,11 @@ augeas { "php.ini":
     "set date.timezone America/Los_Angeles",
   ],
 }
+
+package { "aspell.x86_64":
+  ensure => present,
+}
+
+package { "graphviz.x86_64":
+  ensure => present,
+}
