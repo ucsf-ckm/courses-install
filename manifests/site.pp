@@ -21,3 +21,12 @@ package { "php-soap.x86_64":
 package { "php-intl.x86_64":
   ensure => present,
 }
+
+exec { "epel":
+  command => "/bin/rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm"
+}
+
+package { "clamav":
+  ensure => present,
+  require => Exec["epel"],
+}
