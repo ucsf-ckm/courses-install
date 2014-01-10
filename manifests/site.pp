@@ -30,3 +30,10 @@ package { "clamav":
   ensure => present,
   require => Exec["epel"],
 }
+
+augeas { "php.ini":
+  context => "/files/etc/php.ini/Date",
+  changes => [
+    "set date.timezone America/Los_Angeles",
+  ],
+}
