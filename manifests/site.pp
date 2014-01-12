@@ -2,6 +2,10 @@ exec { "yum update":
   command => "/usr/bin/yum update-minimal -y",
 }
 
+package { "httpd.x86_64":
+  ensure => present,
+}
+
 package { "php-mysql.x86_64":
   ensure => present,
 }
@@ -44,4 +48,11 @@ package { "aspell.x86_64":
 
 package { "graphviz.x86_64":
   ensure => present,
+}
+
+cron { moodle_cron:
+  command => "/usr/bin/php /var/www/html/admin/cli/cron.php > /dev/null",
+  user    => apache,
+  minute  => "*/10",
+  require => Package["httpd.x86_64"],
 }
