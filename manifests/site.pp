@@ -26,6 +26,10 @@ package { "php-intl.x86_64":
   ensure => present,
 }
 
+package { "php-cli.x86_64":
+  ensure => present,
+}
+
 exec { "epel":
   command => "/bin/rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm"
 }
@@ -54,5 +58,5 @@ cron { moodle_cron:
   command => "/usr/bin/php /var/www/html/admin/cli/cron.php > /dev/null",
   user    => apache,
   minute  => "*/10",
-  require => Package["httpd.x86_64"],
+  require => [Package["httpd.x86_64"], Package["php-cli.x86_64"]],
 }
