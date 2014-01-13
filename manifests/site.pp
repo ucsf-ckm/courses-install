@@ -56,6 +56,7 @@ package { "graphviz.x86_64":
 
 cron { moodle_cron:
   command => "/usr/bin/php /var/www/html/admin/cli/cron.php > /dev/null",
+  environment => "MAILTO=CLE-Tech@ucsf.edu",
   user    => apache,
   minute  => "*/10",
   require => [Package["httpd.x86_64"], Package["php-cli.x86_64"]],
