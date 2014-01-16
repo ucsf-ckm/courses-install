@@ -1,0 +1,52 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    puppetlabs/mysql (2.1.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/stdlib (4.1.0)
+
+PATH
+  remote: ./modules.local/aspell
+  specs:
+    aspell (0.0.1)
+
+PATH
+  remote: ./modules.local/clamav
+  specs:
+    clamav (0.0.1)
+
+PATH
+  remote: ./modules.local/cron
+  specs:
+    cron (0.0.1)
+
+PATH
+  remote: ./modules.local/graphviz
+  specs:
+    graphviz (0.0.1)
+
+PATH
+  remote: ./modules.local/httpd
+  specs:
+    httpd (0.0.1)
+
+PATH
+  remote: ./modules.local/init
+  specs:
+    init (0.0.1)
+
+PATH
+  remote: ./modules.local/php
+  specs:
+    php (0.0.1)
+
+DEPENDENCIES
+  aspell (>= 0)
+  clamav (>= 0)
+  cron (>= 0)
+  graphviz (>= 0)
+  httpd (>= 0)
+  init (>= 0)
+  php (>= 0)
+  puppetlabs/mysql (>= 0)
+
