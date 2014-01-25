@@ -1,6 +1,7 @@
 courses-install
 ===============
 
+https://wiki.library.ucsf.edu/display/~659066@ucsf.edu/Setting+up+a+Moodle+Server?src=search#SettingupaMoodleServer-SetupDatabaseforMoodleinMySQLClient
  
 https://wiki.library.ucsf.edu/display/ckm/Setting+Up+Moodle2+CLE2+Servers
 
